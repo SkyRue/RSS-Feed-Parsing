@@ -1,0 +1,22 @@
+// trigger file (currently asks for stories that have obamacare and senate in description, and for stories with "woman" in title posted after march 2017)
+
+// title trigger named t1
+t1,TITLE,woman
+
+// description trigger named t2
+t2,DESCRIPTION,Obamacare
+
+// description trigger named t3
+t3,DESCRIPTION,senate
+
+// after trigger named t4
+t4,AFTER,12 Mar 2017 17:00:10
+
+// composite trigger named t4
+t5,AND,t2,t3
+
+// composite trigger named t4
+t6,AND,t1,t4
+
+// the trigger list contains t1 and t4
+ADD,t5,t6
